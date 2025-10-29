@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Financeiro - Planilha Master</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Intro Screen -->
+        <div class="screen active" id="screen-intro">
+            <div class="logo">
+                <img class="logo-icon" src="./images/logo.png" alt="Logo" draggable="false">
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+            </div>
+            <div class="intro-content">
+                <h1 class="intro-title"><strong>Responda 6 perguntas rápidas</strong></h1>
+                <h3 class="intro-subtitle">
+                    <strong style="color: rgb(9, 9, 11);">Descubra se o seu</strong>
+                    <strong style="color: rgb(22, 163, 74);"> dinheiro</strong>
+                    <strong style="color: rgb(9, 9, 11);"> está sendo </strong>
+                    <strong style="color: rgb(22, 163, 74);">bem administrado</strong>
+                    <strong style="color: rgb(9, 9, 11);"> ou se está </strong>
+                    <strong style="color: rgb(220, 38, 38);">escapando sem você perceber.</strong>
+                </h3>
+                <div class="intro-image">
+                    <img src="./images/person.png" alt="Pessoa" draggable="false">
+                </div>
+                <p class="intro-time">⏱️ Leva apenas 20 segundos</p>
+                <button class="btn-primary btn--pulse" onclick="startQuiz()">INICIAR DIAGNÓSTICO FINANCEIRO</button>
+            </div>
+        </div>
+
+        <!-- Question Screens -->
+        <div class="screen" id="screen-question">
+            <div class="logo">
+                <img class="logo-icon" src="./images/logo.png" alt="Logo" draggable="false">
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar-question"></div>
+            </div>
+            <div class="question-header">
+                <div class="question-counter" id="question-counter"></div>
+                <h2 class="question-text" id="question-text"></h2>
+            </div>
+            <div class="options-container" id="options-container"></div>
+        </div>
+
+        <!-- Offer Screen -->
+        <div class="screen" id="screen-offer">
+            <div class="logo">
+                <img class="logo-icon" src="./images/logo.png" alt="Logo" draggable="false">
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 100%;"></div>
+            </div>
+            <div class="offer-content">
+                <div class="urgency-banner">
+                    🔥 RESTAM APENAS 20 VAGAS COM 70% DE DESCONTO!
+                </div>
+                <h2 class="offer-title">Planilha de Organização Financeira</h2>
+                <div class="product-mockup">
+                    <div class="banner">
+                        <img src="./images/banner.png" alt="Banner" draggable="false">
+                    </div>
+                </div>
+                <p class="offer-slogan">Quem se organiza, prospera.</p>
+                <p class="offer-description">
+                    A forma mais simples e funcional para organizar e visualizar seu dinheiro.
+                </p>
+                <div class="price-box">
+                    <div class="price-header">OFERTA VÁLIDA SOMENTE HOJE 🎁</div>
+                    <div class="price-old">DE R$ 97,00</div>
+                    <div class="price-current">POR APENAS R$ 29,90</div>
+                    <div class="discount-badge">70% OFF</div>
+                </div>
+                <button class="btn-primary" onclick="handlePurchase()">QUERO MINHA PLANILHA FINANCEIRA</button>
+                <div class="guarantee-badge">
+                    <span>🛡️</span>
+                    <span>GARANTIA 30 DIAS</span>
+                </div>
+
+                <div class="testimonials-section">
+                    <h3 class="testimonials-title">O que nossos clientes dizem:</h3>
+                    <div id="testimonials-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
