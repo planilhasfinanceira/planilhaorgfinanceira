@@ -178,7 +178,7 @@ function loadTestimonials() {
 
 // Handle Purchase
 function handlePurchase() {
-    alert('Redirecionando para checkout...');
+    window.location.href = 'https://pay.cakto.com.br/krqwehx_605988';
 }
 
 // Show Screen
