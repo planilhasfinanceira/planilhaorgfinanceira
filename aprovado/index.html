@@ -135,7 +135,10 @@
         }
 
         .content {
+            display: flex;
             padding: 40px 30px;
+            flex-direction: column;
+            align-items: center;
         }
 
         .info-card {
@@ -307,7 +310,6 @@
             justify-content: center;
             gap: 10px;
             margin-bottom: 30px;
-            justify-self: center;
         }
 
         .logo-icon {
@@ -363,78 +365,84 @@
             <div class="logo">
                 <img class="logo-icon" src="../images/logo.png" alt="Logo" draggable="false">
             </div>
+            <div>
+                <!-- <div class="info-card">
+                    <div class="info-card-icon">🎉</div>
+                    <div class="info-card-text">
+                        <h3>Bem-vindo à sua nova jornada financeira!</h3>
+                        <p>Parabéns por dar esse passo importante rumo à organização das suas finanças. Você está a minutos de ter controle total do seu dinheiro!</p>
+                    </div>
+                </div> -->
 
-            <!-- <div class="info-card">
-                <div class="info-card-icon">🎉</div>
-                <div class="info-card-text">
-                    <h3>Bem-vindo à sua nova jornada financeira!</h3>
-                    <p>Parabéns por dar esse passo importante rumo à organização das suas finanças. Você está a minutos de ter controle total do seu dinheiro!</p>
+                <div class="email-highlight">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#2d8a5f" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 4.697v4.974A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-1.965.45l-.338-.207z"/>
+                        <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686"/>
+                        </svg>
+                    </div>
+                    <p style="color: #666; margin-bottom: 5px;">Sua planilha será enviada para</p>
+                    <strong id="userEmail">O E-mail em que você fez a compra!</strong>
+                    <p style="color: #666; font-size: 13px; margin-top: 10px;">Verifique sua caixa de entrada e spam</p>
                 </div>
-            </div> -->
 
-            <div class="email-highlight">
-                <div class="icon">📧</div>
-                <p style="color: #666; margin-bottom: 5px;">Sua planilha será enviada para</p>
-                <strong id="userEmail">O E-mail em que você fez a compra!</strong>
-                <p style="color: #666; font-size: 13px; margin-top: 10px;">Verifique sua caixa de entrada e spam</p>
-            </div>
+                <h2 style="color: #1A1A1A; font-size: 20px; margin-bottom: 20px; text-align: center;">Próximos Passos</h2>
 
-            <h2 style="color: #1A1A1A; font-size: 20px; margin-bottom: 20px; text-align: center;">📋 Próximos Passos</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Verifique seu email</h4>
+                            <p>Em até 5 minutos você receberá um email com o link de acesso à planilha no Google Sheets.</p>
+                        </div>
+                    </div>
 
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>Verifique seu email</h4>
-                        <p>Em até 5 minutos você receberá um email com o link de acesso à planilha no Google Sheets.</p>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Faça uma cópia da planilha</h4>
+                            <p>Clique em "Arquivo" → "Fazer uma cópia" para ter sua versão editável e começar a usar.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Preencha suas informações</h4>
+                            <p>Comece pelos custos fixos, depois investimentos. Assim você garante o essencial antes de gastar.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Acompanhe mensalmente</h4>
+                            <p>Use a planilha todo mês para ter visão clara de para onde está indo cada centavo do seu salário.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>Faça uma cópia da planilha</h4>
-                        <p>Clique em "Arquivo" → "Fazer uma cópia" para ter sua versão editável e começar a usar.</p>
+                <div class="details-box">
+                    <h3 style="color: #1A1A1A; font-size: 18px; margin-bottom: 15px;">Detalhes da Compra</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">Produto</span>
+                        <span class="detail-value" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 59%;">Planilha de Organização Financeira</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Data</span>
+                        <span class="detail-value" id="purchaseDate"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Garantia</span>
+                        <span class="detail-value">30 dias</span>
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>Preencha suas informações</h4>
-                        <p>Comece pelos custos fixos, depois investimentos. Assim você garante o essencial antes de gastar.</p>
-                    </div>
+                <div class="support-section">
+                    <h3>💬 Precisa de Ajuda?</h3>
+                    <p>Estamos aqui para você! Qualquer dúvida, entre em contato com nosso suporte.</p>
+                    <a href="https://instagram.com/murilos4v" class="support-button">Falar com o Suporte</a>
                 </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h4>Acompanhe mensalmente</h4>
-                        <p>Use a planilha todo mês para ter visão clara de para onde está indo cada centavo do seu salário.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="details-box">
-                <h3 style="color: #1A1A1A; font-size: 18px; margin-bottom: 15px;">📄 Detalhes da Compra</h3>
-                <div class="detail-row">
-                    <span class="detail-label">Produto</span>
-                    <span class="detail-value">Planilha de Organização Financeira</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Data</span>
-                    <span class="detail-value" id="purchaseDate"></span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Garantia</span>
-                    <span class="detail-value">30 dias</span>
-                </div>
-            </div>
-
-            <div class="support-section">
-                <h3>💬 Precisa de Ajuda?</h3>
-                <p>Estamos aqui para você! Qualquer dúvida, entre em contato com nosso suporte.</p>
-                <a href="https://instagram.com/murilos4v" class="support-button">Falar com o Suporte</a>
             </div>
         </div>
 
