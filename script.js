@@ -178,7 +178,7 @@ function loadTestimonials() {
 
 // Handle Purchase
 function handlePurchase() {
-    window.location.href = 'https://pay.cakto.com.br/krqwehx_605988';
+    window.location.href = 'https://finansmart.pay.yampi.com.br/r/PHZTR3SZH2';
 }
 
 // Show Screen
