@@ -8,48 +8,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1130819769223143');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1130819769223143&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <div class="container">
         <!-- Intro Screen -->
         <div class="screen active" id="screen-intro">
-            <div class="logo">
-                <img class="logo-icon" src="./images/logo.png" alt="Logo" draggable="false">
-            </div>
-            <div>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progress-bar" style="width: 12%;"></div>
+            <div class="center-hero">
+                <div class="logo">
+                    <img class="logo-icon" src="./images/logo.png" alt="Logo" draggable="false">
                 </div>
-                <div class="intro-content">
-                    <h1 class="intro-title"><strong>Responda 6 perguntas rápidas</strong></h1>
-                    <h3 class="intro-subtitle">
-                        <strong style="color: rgb(9, 9, 11);">Descubra se você está no caminho da</strong>
-                        <strong style="color: rgb(22, 163, 74);"> independência financeira</strong>
-                        <strong style="color: rgb(9, 9, 11);"> ou se está apenas</strong>
-                        <strong style="color: rgb(220, 38, 38);"> sobrevivendo de salário em salário.</strong>
-                    </h3>
-                    <div class="intro-image">
-                        <img src="./images/person.png" alt="Pessoa" draggable="false">
+                <div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar" style="width: 12%;"></div>
                     </div>
-                    <p class="intro-time">⏱️ Leva apenas 20 segundos</p>
-                    <button class="btn-primary btn--pulse" onclick="startQuiz()">INICIAR DIAGNÓSTICO FINANCEIRO</button>
+                    <div class="intro-content">
+                        <h1 class="intro-title"><strong>Responda 6 perguntas rápidas</strong></h1>
+                        <h3 class="intro-subtitle">
+                            <strong style="color: rgb(9, 9, 11);">Descubra se você está no caminho da</strong>
+                            <strong style="color: rgb(22, 163, 74);"> independência financeira</strong>
+                            <strong style="color: rgb(9, 9, 11);"> ou se está apenas</strong>
+                            <strong style="color: rgb(220, 38, 38);"> sobrevivendo de salário em salário.</strong>
+                        </h3>
+                        <div class="intro-image">
+                            <img src="./images/person.png" alt="Pessoa" draggable="false">
+                        </div>
+                        <p class="intro-time">⏱️ Leva apenas 20 segundos</p>
+                        <button class="btn-primary btn--pulse" onclick="startQuiz()">INICIAR DIAGNÓSTICO FINANCEIRO</button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Question Screens -->
         <div class="screen" id="screen-question">
-            <div class="logo">
-                <img class="logo-icon" src="./images/logo.png" alt="Logo" draggable="false">
+            <div class="center-hero">
+                <div class="logo">
+                    <img class="logo-icon" src="./images/logo.png" alt="Logo" draggable="false">
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar-question"></div>
+                </div>
+                <div class="question-header">
+                    <div class="question-counter" id="question-counter"></div>
+                    <h2 class="question-text" id="question-text"></h2>
+                </div>
+                <div class="options-container" id="options-container"></div>
             </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="progress-bar-question"></div>
-            </div>
-            <div class="question-header">
-                <div class="question-counter" id="question-counter"></div>
-                <h2 class="question-text" id="question-text"></h2>
-            </div>
-            <div class="options-container" id="options-container"></div>
         </div>
 
         <!-- Offer Screen -->
